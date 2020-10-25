@@ -1,5 +1,5 @@
 <?php
-require_once("function.php");
+require_once("functions.php");
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -15,5 +15,28 @@ require_once("function.php");
         <span class="navbar-brand mb-0 h1">TODO</span>
     </div>
 </nav>
+<div class="container mt-4">
+    <?php if ($message !== "") : ?>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger" roll="alert">
+                    <?php echo htmlspecialchars($message); ?>
+                </div>
+            </div>
+        </div>
+    <?php endif ?>
+    <div class="row">
+        <div class="col-md-12">
+            <form action="todo_add.php" method="POST" class="form">
+                <div class="input-group mb-2">
+                    <input type="text" name="task" id="task" class="form-control">
+                    <div class="input-group-append">
+                        <input type="submit" class="btn btn-primary" value="Add">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
