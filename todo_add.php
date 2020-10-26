@@ -15,7 +15,7 @@ if (mb_strlen($task) >= 140) {
 $lock_handle = lock_file();
 
 //タスク入力時に必要な情報
-$id = new_get_todo_id();
+$id = get_new_todo_id();
 $date = date('Y-m-d H:m:s');
 $status = STATUS_OPENED;
 $todo = [$id, $task, $date, $status];
