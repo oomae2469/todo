@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "IDとパスワードを入力して下さい"
+AuthUserFile /Users/oomaetakahiro/Desktop/todo/.htpasswd
+require valid-user
